@@ -345,10 +345,9 @@ p {
 
 
 
-
-
 .about-container {
   text-align: center;
+  margin-top: 100px;
 }
 
 .mockup {
@@ -378,7 +377,7 @@ p {
   transform: translate3d(0, 0, 0) rotateX(-90deg);
 }
 
-.mockup:hover .part.top {
+.mockup.opened .part.top {
   transform: translate3d(0, 0, 0) rotateX(0deg);
 }
 
@@ -405,10 +404,13 @@ p {
   display: block;
   max-width: 100%;
   backface-visibility: hidden;
+  filter: hue-rotate(270deg); /* Color transformation */
 }
 
 .mockup .part .cover {
   position: relative;
+  background-color: #38264e;
+  filter: hue-rotate(270deg); /* Adjust color */
 }
 
 .mockup video {
@@ -432,4 +434,9 @@ p {
 .mockup .part .bottom {
     transform-origin: 50% 0;
     transform: translate3d(0,0,0) rotateX(90deg);
+}
+
+
+.laptop{
+  mix-blend-mode: lighten;
 }
